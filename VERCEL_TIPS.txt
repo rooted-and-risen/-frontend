@@ -1,0 +1,8 @@
+Vercel Deployment Tips
+- Frontend: Best deployed as a static app (Vite/Next). Set REACT_APP_API_BASE env var in Vercel dashboard to the backend URL.
+- Backend: Deploy to a server provider (Render, Railway, Fly, Heroku). For small projects, Render or Railway are easy to use.
+- Mailchimp / ConvertKit: Use their embed forms or API; add environment variables for API keys.
+- Recommended production changes:
+  - Replace file-based posts.json with a managed DB (Postgres via Supabase/Render).
+  - Replace demo auth with Supabase Auth / Auth0 / Clerk.
+  - Store images in object storage (S3, Supabase Storage) and save URLs.
